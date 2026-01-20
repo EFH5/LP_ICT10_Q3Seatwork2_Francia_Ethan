@@ -15,7 +15,6 @@ def check(event=None):
 
     elif reg.value != "yes" or med.value != "yes":
         output_text.innerText = "INELIGIBLE: Please make sure to register online and/or submit your medical clearance"
-        output_img.src = "red.jpg"
 
     elif section == "sapphire":
         output_text.innerText = f"G{grade} - Sapphire: Blue Bears. Congratulations!"
@@ -32,3 +31,4 @@ def check(event=None):
     elif section == "topaz":
         output_text.innerText = f"G{grade} - Topaz: Yellow Tigers. Congratulations!"
         output_img.src = "yellow.jpg"
+
