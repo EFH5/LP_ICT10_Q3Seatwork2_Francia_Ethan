@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SW#2</title>
+
+<!-- PyScript -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        background-image: url(bg.png);
+    }
+    .container {
+        width: 520px;
+        height: 550px;
+        background: rgb(255, 227, 185);
+        padding: 20px;
+        margin: 40px auto;
+        border: 1px solid #ccc;
+        outline-style: solid;
+        outline-width: 2.5px;
+        outline-color: forestgreen;
+        box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.8);
+    }
+    label {
+        display: block;
+        margin-top: 8px;
+    }
+    select, button {
+        width: 100%;
+        margin-top: 5px;
+    }
+    #output {
+        margin-top: 15px;
+        text-align: center;
+    }
+    #output img {
+        width: 80px;
+        margin-top: 10px;
+    }
+    h3 {
+        color: forestgreen;
+        text-align: center;
+    }
+    button {
+        background-color: forestgreen;
+        color: beige;
+        padding: 3px;
+        border-radius: 4px;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h3>SW#2 Third Quarter</h3>
+
+    <label>Have you registered online?</label>
+    <input type="radio" name="reg" value="yes"> Yes
+    <input type="radio" name="reg" value="no"> No
+
+    <label>Do you have medical clearance?</label>
+    <input type="radio" name="med" value="yes"> Yes
+    <input type="radio" name="med" value="no"> No
+
+    <label>Grade:</label>
+    <select id="grade">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select><br>
+
+    <label>Section:</label>
+    <select id="section">
+        <option value="sapphire">Sapphire</option>
+        <option value="ruby">Ruby</option>
+        <option value="emerald">Emerald</option>
+        <option value="topaz">Topaz</option>
+    </select>
+
+    <button py-click="check">Check Eligibility</button>
+
+    <div id="output">
+        <p id="output-text"></p>
+        <img id="output-img" src="">
+    </div>
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
